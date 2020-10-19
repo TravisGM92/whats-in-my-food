@@ -27,6 +27,7 @@ RSpec.describe 'movie show page' do
               expect(page).to have_content("#{food[:brandOwner]}")
               expect(page).to have_content("#{food[:ingredient]}")
             end
+            expect(page).to_not have_css(".food-11")
           end
         end
       end

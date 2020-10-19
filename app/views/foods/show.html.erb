@@ -1,1 +1,12 @@
 Total results: <%= @foods[0]%>
+<%x = 0 %>
+<% @foods[1..10].each do |food| %>
+  <br>
+  <div class="food-<%=x += 1%>">
+
+  <%= food.gtinupc %>
+  <%= food.ingredients %>
+  <%= food.description %>
+  <%= food.brand_owner %>
+</div>
+<%end %>
