@@ -1,5 +1,5 @@
 class FoodsQuery
-  def self.get_foods(ingredient)
+  def self.get_10_foods(ingredient)
     foods = []
     conn = Faraday.new(url: 'https://api.nal.usda.gov')
     response = conn.get("https://api.nal.usda.gov/fdc/v1/foods/search?query=#{ingredient}&api_key=#{ENV['FDC_key']}")
